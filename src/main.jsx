@@ -7,6 +7,7 @@ import AdminLoginPage from "./pages/AdminLoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function renderRoutes(role) {
+  console.log("role", role)
   switch (role) {
     case "admin":
       return (
@@ -36,7 +37,7 @@ function Main() {
     <div className="h-full">
       <div className="flex w-full">
         <div className="w-full">
-          <div className="page-wrapper w-full py-10 px-5">
+          <div className="page-wrapper h-screen">
             {!state.isAuthenticated
               ? renderRoutes("none")
               : renderRoutes(state.role)}

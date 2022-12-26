@@ -1,0 +1,23 @@
+.dashboard__header {
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__header h4{
+    color: #fff;
+}
+.dashboard__header-span{
+    display: flex;
+    background-color: rgb(36, 35, 35);
+    padding: 5px;
+    border-radius: 5px;
+}
+.dashboard__header-span p{
+    padding-right: 10px;
+    font-size: 12px;
+}
+.dashboard__header-span p:nth-child(2){
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 2px 2px;
+
+}

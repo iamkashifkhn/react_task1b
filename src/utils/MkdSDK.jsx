@@ -105,6 +105,22 @@ export default function MkdSDK() {
 
   this.check = async function (role) {
     //TODO
+    const token = localStorage.getItem('token')
+    const checkResponse = await fetch('https://reacttask.mkdlabs.com/v2/api/lambda/check', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application.json',
+        'Content-Type': 'application/json',
+        'x-project': base64Encode,
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        role: role
+      }),
+    })
+    const response = await checkResponse.json()
+    return response
+
   };
 
   return this;
