@@ -9,7 +9,7 @@ import SnackBar from "../components/SnackBar";
 import { GlobalContext, showToast } from "../globalContext";
 
 const AdminLoginPage = () => {
-const { state, dispatch:dispatch2 } = React.useContext(GlobalContext);
+const { dispatch:dispatch2 } = React.useContext(GlobalContext);
   const schema = yup
     .object({
       email: yup.string().email().required(),
