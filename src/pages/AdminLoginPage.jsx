@@ -49,7 +49,7 @@ const { dispatch:dispatch2 } = React.useContext(GlobalContext);
   };
 
   return (
-    <div className="w-full max-w-xs mx-auto">
+    <div className="h-screen w-full max-w-xs mx-auto mkd__login">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-8 "
@@ -91,10 +91,10 @@ const { dispatch:dispatch2 } = React.useContext(GlobalContext);
             {errors.password?.message}
           </p>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col">
           <input
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             value="Sign In"
           />
         </div>

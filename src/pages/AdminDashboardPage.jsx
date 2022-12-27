@@ -4,8 +4,13 @@ import './admindashboard.css'
 import { AuthContext } from "../authContext";
 import MkdSDK from "../utils/MkdSDK";
 import {UserOutlined} from '@ant-design/icons'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 let sdk = new MkdSDK();
+
+
+
 const AdminDashboardPage = () => {
 
   const [pageData, setPageData] = useState([])
@@ -36,6 +41,7 @@ const AdminDashboardPage = () => {
     setPageData(page)
   }
 
+  
   const navigate = useNavigate()
   const { dispatch } = React.useContext(AuthContext);
   const handleLogout =()=>{
@@ -85,6 +91,7 @@ const AdminDashboardPage = () => {
               {
                 pageData?.list?.map((item)=>{
                   return(
+                    <DndProvider backend={HTML5Backend}>
                     <div className="dashboard__table-row">
                         <span>{item.id}</span>
                         <span><img src={item.photo}/></span>
@@ -92,6 +99,7 @@ const AdminDashboardPage = () => {
                         <span>{item.username}</span>
                         <span>{item.like}</span>
                     </div>
+                    </DndProvider>
                   )
                 })
               }

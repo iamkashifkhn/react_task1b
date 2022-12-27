@@ -11,7 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.mkd__login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
