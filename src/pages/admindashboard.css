@@ -43,9 +43,9 @@ body{
     width: 50px;
     height: 50px;
 }
-.dashobard__table-title{
+/* .dashobard__table-title{
     width: 800px;
-}
+} */
 .dashboard__table-row span{
     padding: 20px 0px 20px 20px;
     color: #fff;  
@@ -105,4 +105,28 @@ body{
 .dashbaord__button button:disabled{
     background-color: azure;
     cursor: not-allowed;
+}
+td img{
+    width: 50px;
+    height: 50px;
+}
+th{
+    color: #fff;
+    text-align: left;
+    padding: 20px 0px 20px 20px;
+}
+table{
+    width: 100%;
+}
+tr{
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+}
+td{
+    padding: 20px 0px 20px 20px;
+}
+td {
+    color: #fff;
 }
